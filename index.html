@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Denis Zendera">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Denis Zendera - Information Systems Student & Developer Portfolio">
+    <title>Denis Zendera | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-content">
+            <a href="#hero" class="logo">.Denis</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certificates" class="nav-link">Certificates</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <img class="background-image" src="assets/background image.jpg" alt="3D Abstract Background">
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">Hey, I'm</span>
+                    <span class="name-large">Denis Zendera</span>
+                </h1>
+                <p class="hero-subtitle">Information Systems Student</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">I'm an Information Systems undergraduate at Midlands State University, passionate about building intelligent and visually refined digital systems that blend technology and design.</p>
+                    <p>I believe in the power of simplicity — creating clean, functional solutions that connect form and function to deliver meaningful user experiences. My interests lie in full-stack development and machine learning, where I aim to design data-driven, scalable, and user-focused applications. I'm constantly learning, experimenting with new technologies, and expanding my skills through academic work, personal projects, and professional certifications driven by curiosity and a desire to stay ahead in the evolving world of technology.</p>
+                    <div class="skills">
+                        <h3 class="skills-title">Skills & Expertise</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <span class="skill-icon">🌐</span>
+                                <span class="skill-name">Web Development</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">⚙️</span>
+                                <span class="skill-name">Software Engineering</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">📊</span>
+                                <span class="skill-name">Data Science</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="projectCount" data-target="0">0</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1.5" data-decimal="true">0</span>
+                        <span class="stat-label">Years Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+
+            <!-- Project Filter -->
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="section certificates-section" id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Certifications</h2>
+            </div>
+            <div class="certificates-grid" id="certificatesGrid">
+                <!-- Certificates will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3 class="contact-heading">Have a project in mind?</h3>
+                    <p class="contact-description">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Let's create something amazing together.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:denistzendera@gmail.com" class="contact-method">
+                            <img src="assets/email.png" alt="Email" class="method-icon-img">
+                            <span class="method-text">denistzendera@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/denis-zendera-7b108b386/" class="contact-method" target="_blank" rel="noopener">
+                            <img src="assets/linkedin.png" alt="LinkedIn" class="method-icon-img">
+                            <span class="method-text">LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" action="mailto:denistzendera@gmail.com" method="POST" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">&copy; 2025 Denis Zendera.</p>
+                <div class="footer-links">
+                    <a href="#hero" class="footer-link">Back to Top ↑</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
