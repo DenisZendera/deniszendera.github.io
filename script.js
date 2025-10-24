@@ -22,7 +22,7 @@ function renderProjects() {
         projectCard.innerHTML = `
             <div class="project-image">
                 <div class="project-placeholder">
-                    <span class="project-icon">${project.icon}</span>
+                    <span class="project-icon"><i class="fa ${project.icon}" aria-hidden="true"></i></span>
                 </div>
             </div>
             <div class="project-content">
@@ -66,7 +66,7 @@ function renderCertificates() {
 
         certCard.innerHTML = `
             <div class="certificate-icon">
-                <span class="cert-emoji">${cert.icon}</span>
+                <span class="cert-emoji"><i class="fa ${cert.icon}" aria-hidden="true"></i></span>
             </div>
             <div class="certificate-content">
                 <h3 class="certificate-title">${cert.title}</h3>
