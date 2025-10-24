@@ -29,8 +29,8 @@ const projects = [
         category: "web",
         icon: "fa-laptop",
         tags: ["HTML", "CSS", "JavaScript"],
-        url: "https://deniszendera.github.io/"
-    }
+        url: "https://deniszendera.github.io/",
+    },
 
 ];
 
@@ -51,6 +51,41 @@ const certificates = [
 
     // ADD YOUR CERTIFICATES BELOW THIS LINE
     // --------------------------------------
+
+    {
+        title: "Mathematics for Machine Learning: Multivariate Calculus",
+        issuer: "Imperial College London via Coursera",
+        icon: "fa-certificate",
+        url: "https://coursera.org/share/d64f57ec3c38ffebca8fb58fcf7cfaa8"
+    },
+
+    {
+        title: "Mathematics for Machine Learning: Linear Algebra",
+        issuer: "Imperial College London via Coursera",
+        icon: "fa-certificate",
+        url: "https://coursera.org/share/79f4c5af1e44a5b609271856985a3fb3"
+    },
+
+    {
+        title: "Python for Data Science, AI & Development",
+        issuer: "IBM via Coursera",
+        icon: "fa-certificate",
+        url: "https://coursera.org/share/a7bc68bd595721a2745031f48cb89b96"
+    },
+
+    {
+        title: "AWS Cloud Practitioner Essentials",
+        issuer: "Amazon Web Services (AWS) via Coursera",
+        icon: "fa-certificate",
+        url: "https://coursera.org/share/f019c2261d0cc465e2a4f990ebc71aa8",
+    },
+
+    {
+        title: "Introduction to HTML, CSS, & JavaScript",
+        issuer: "IBM via Coursera",
+        icon: "fa-certificate",
+        url: "https://coursera.org/share/2830b991e13820bd27704b8928f93876"
+    }
 
 ];
 
