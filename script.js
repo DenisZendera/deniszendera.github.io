@@ -276,45 +276,66 @@ if (heroBackground) {
 }
 
 // ===================================
-// FORM SUBMISSION HANDLER
+// FORM SUBMISSION HANDLER (Formspree)
 // ===================================
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Get form data
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            message: document.getElementById('message').value
-        };
-
-        // Simulate form submission
+        const formStatus = document.getElementById('formStatus');
         const submitBtn = contactForm.querySelector('.btn-primary');
         const originalText = submitBtn.textContent;
+
+        // Update button state
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
+        formStatus.textContent = '';
+        formStatus.className = 'form-status';
 
-        // Simulate API call
-        setTimeout(() => {
-            submitBtn.textContent = 'Message Sent!';
-            submitBtn.style.background = '#4CAF50';
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-            // Reset form
-            contactForm.reset();
+            if (response.ok) {
+                // Success
+                submitBtn.textContent = 'Message Sent!';
+                submitBtn.style.background = '#4CAF50';
+                formStatus.textContent = 'Thanks for reaching out! I\'ll get back to you soon.';
+                formStatus.className = 'form-status success';
 
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = '';
-            }, 3000);
-        }, 1500);
+                // Reset form
+                contactForm.reset();
 
-        // In a real application, you would send this data to a server
-        console.log('Form submitted:', formData);
+                // Reset button after 5 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                    formStatus.textContent = '';
+                    formStatus.className = 'form-status';
+                }, 5000);
+            } else {
+                // Error from server
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Error handling
+            submitBtn.textContent = 'Try Again';
+            submitBtn.disabled = false;
+            submitBtn.style.background = '';
+            formStatus.textContent = 'Oops! Something went wrong. Please try again or email me directly.';
+            formStatus.className = 'form-status error';
+
+            console.error('Form submission error:', error);
+        }
     });
 }
 
