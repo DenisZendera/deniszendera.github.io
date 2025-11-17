@@ -32,6 +32,15 @@ const projects = [
         url: "https://deniszendera.github.io/",
     },
 
+    {
+        title: "Hospital Queue Management System",
+        description: "A web application to manage patient queues in hospitals by providing bookings, improving efficiency and reducing wait times.",
+        category: "web",
+        icon: "fa-code",
+        tags: ["HTML", "CSS", "JavaScript", "Typescript"],
+        url: "https://github.com/DenisZendera/hospital-queue-management-system-repo",
+    }
+
 ];
 
 // ===================================
